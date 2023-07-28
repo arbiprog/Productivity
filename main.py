@@ -1,18 +1,19 @@
-from PySide6.QtWidgets import QApplication , QMainWindow , QPushButton
 import sys
+from PySide6.QtWidgets import QApplication , QMainWindow , QPushButton
 app=QApplication(sys.argv)
 
-Window=QMainWindow()
-Window.setWindowTitle("برنامج قياس الإنتاجية")
-Window.resize(500,500)
 
-button=QPushButton()
-button.setText("click me")
-button.setFixedSize(120,50)
+class new(QMainWindow):
+    def __init__(self):
+        super().__init__()
+       
+        self.setWindowTitle("الإنتاجية")
+        button = QPushButton("click me")
+
+        self.setCentralWidget(button)
+
+window=new()
 
 
-Window.setCentralWidget(button)
-
-
-Window.show()
+window.show()
 app.exec()
